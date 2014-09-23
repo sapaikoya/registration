@@ -1,0 +1,36 @@
+
+<ion-view title="{{user.name}}">
+  <ion-content has-header="true">
+
+      <div class="list">
+          <form name="form" >
+              <label class="item  item-input ">
+                  <span class="input-label">Имя </span>
+                  <input type="text" name="name" data-ng-model="user.name" required ng-maxlength="25">
+              </label>
+
+              <label class="item  item-input" data-ng-if="user.mail">
+                  <span class="input-label">EMAIL</span>
+                  <span>{{user.mail}}</span>
+              </label>
+              <label class=" item-input">
+                  <span class="input-label">Пароль</span>
+                  <span>{{user.password}}</span>
+              </label>
+              <div class="card" data-ng-if="form.name.$invalid && form.name.$dirty">
+                  <div class="item item-text-wrap">
+                      Введите Имя пользователя. Максимальная длина 25 символов.
+                  </div>
+              </div>
+              <div class="padding">
+                  <button class="button button-block button-positive" data-ng-click="save()">
+                      Сохранить
+                  </button>
+              </div>
+          </form>
+
+      </div>
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,28 @@
+
+<ion-view title="Пользователи">
+  <ion-content has-header="true">
+
+
+      <div class="padding">
+          <ion-list class='icon-item-edit'>
+              <ion-item ng-repeat="user in Users" type="item-text-wrap" class=" item-icon-left item-icon-right" href="#/user/{{user.id}}">
+                  <i class="icon ion-person"></i>
+
+
+                  <div class="row">
+                      <div class="col">{{user.name}}</div>
+                      <div class="col">{{user.mail}}</div>
+                  </div>
+                  <i class="icon ion-chevron-right"></i>
+              </ion-item>
+          </ion-list>
+
+
+      </div>
+
+
+
+  </ion-content>
+</ion-view>
+
+
