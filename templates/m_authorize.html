@@ -3,8 +3,6 @@
         <div class="bg-logo"><div class="logo"></div></div>
         <div class="loader" data-ng-if="showLoader"><i class="ion-loading-a"></i></div>
         <form name="Freg">
-
-     
             <div class="list">
                 <label class="item item-input item-stacked-label">
                     <input type="text" name="userName" data-ng-model="nuser.name" required ng-maxlength="25" placeholder="Имя"/>
@@ -33,10 +31,8 @@
                 </div>
                 <div class="padding">
                     <button class="button button-positive button-block" data-ng-disabled="!(nuser.name && nuser.mail && nuser.password && Freg.$valid)" data-ng-click="addUser()">Добавить</button>
-
                 </div>
             </div>
-
         </form>
     </ion-content>
 </ion-view>
