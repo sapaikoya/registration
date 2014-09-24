@@ -1,16 +1,8 @@
+var starter_controllers = angular.module('starter', ['ionic', 'starter.controllers'])
 
-
-angular.module('starter', ['ionic', 'starter.controllers'])
-
-
-
-.config(function($stateProvider, $urlRouterProvider, $compileProvider) {
-
+.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-
-
-
       .state('user', {
           url: '/',
           templateUrl: 'templates/user.html',
@@ -26,10 +18,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           templateUrl: 'templates/m_authorize.html',
           controller: 'AuthorizeCtrl'
       })
-
-
-
-
   $urlRouterProvider.otherwise('/');
 
 });
